@@ -1,0 +1,90 @@
+{
+  "title": "Product",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "unique": true,
+      "title": "Id",
+      "description": "Unique identifier for the product",
+      "edi": {
+        "segment": "id"
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name to be displayed"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Product SKU"
+    },
+    "description": {
+      "type": "string",
+      "description": "Products description text"
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Product price"
+    },
+    "cost_price": {
+      "type": "number",
+      "description": "The cost price of the product"
+    },
+    "available_on": {
+      "type": "string",
+      "format": "date",
+      "description": "Date from when this product should be available to buy"
+    },
+    "permalink": {
+      "type": "string",
+      "description": "Link to product"
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Description to be place in the metadata"
+    },
+    "meta_keywords": {
+      "type": "string",
+      "description": "Keywords to be placed in Products metadata"
+    },
+    "shipping_category": {
+      "type": "string",
+      "description": "Shipping category"
+    },
+    "options": {
+      "type": "array",
+      "description": "Object that specifies the products options"
+    },
+    "taxons": {
+      "type": "array",
+      "description": "List of categories"
+    },
+    "properties": {
+      "type": "object",
+      "description": "Object that specifies the products properties"
+    },
+    "variants": {
+      "type": "array",
+      "description": "Variants of product"
+      "items": {
+        "$ref": "variant.json"
+      }
+    },
+    "images": {
+      "type": "array",
+      "description": "Products images",
+      "items": {
+        "$ref": "image.json"
+      }
+    }
+  },
+  "required": [
+    "_id",
+    "name",
+    "price",
+    "available_on",
+    "shipping_category"
+  ]
+}

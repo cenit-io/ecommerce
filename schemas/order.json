@@ -1,0 +1,82 @@
+{
+  "title": "Order",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "unique": true,
+      "title": "Id",
+      "description": "Unique identifier for the order",
+      "edi": {
+        "segment": "id"
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "Current order status"
+    },
+    "channel": {
+      "type": "string",
+      "description": "Location where order was placed"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency ISO code"
+    },
+    "placed_on": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date & time order was placed (ISO format)"
+    },
+    "totals": {
+      "$ref": "order_total.json",
+      "description": "Order value totals"
+    },
+    "line_items": {
+      "type": "array",
+      "description": "Array of the order’s line items",
+      "items": {
+        "$ref": "line_item.json"
+      }
+    },
+    "adjustments": {
+      "type": "array",
+      "description": "Array ot the orders’ adjustments",
+      "items": {
+        "$ref": "adjustment.json"
+      }
+    },
+    "shipping_address": {
+      "$ref": "address.json",
+      "description": "Customers shipping address"
+    },
+    "billing_address": {
+      "$ref": "address.json",
+      "description": "Customers billing address"
+    },
+    "payments": {
+      "type": "array",
+      "description": "Array of the order’s payments",
+      "items": {
+        "$ref": "payment.json"
+      }
+    },
+    "shipments": {
+      "type": "array",
+      "description": "Array of shipments",
+      "items": {
+        "$ref": "shipment.json"
+      }
+    }
+  },
+  "required": [
+    "_id",
+    "status",
+    "channel",
+    "currency"
+  ]
+}

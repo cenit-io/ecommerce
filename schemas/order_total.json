@@ -1,0 +1,36 @@
+{
+  "title": "OrderTotal",
+  "type": "object",
+  "properties": {
+    "item": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total of price * quantity for all line items"
+    },
+    "adjustment": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total of all adjustment values"
+    },
+    "tax": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total of tax adjustment values"
+    },
+    "shipping": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total of shipping adjustment values"
+    },
+    "payment": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total of all payments for this order"
+    },
+    "order": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Overall total of order"
+    }
+  }
+}

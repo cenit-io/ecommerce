@@ -1,0 +1,27 @@
+{
+  "title": "LineItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product’s name"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Quantity ordered"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price per item"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "Unique identifier of product"
+    }
+  },
+  "required": [
+    "name",
+    "quantity",
+    "price"
+  ]
+}

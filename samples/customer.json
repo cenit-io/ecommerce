@@ -1,0 +1,26 @@
+{
+  "customer": {
+    "id": "a123",
+    "firstname": "Brian",
+    "lastname": "Smith",
+    "email": "spree@example.com",
+    "shipping_address": {
+      "address1": "1234 Awesome Street",
+      "address2": "",
+      "zipcode": "90210",
+      "city": "Hollywood",
+      "state": "California",
+      "country": "US",
+      "phone": "0000000000"
+    },
+    "billing_address": {
+      "address1": "1234 Awesome Street",
+      "address2": "",
+      "zipcode": "90210",
+      "city": "Hollywood",
+      "state": "California",
+      "country": "US",
+      "phone": "0000000000"
+    }
+  }
+}

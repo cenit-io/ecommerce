@@ -1,0 +1,71 @@
+{
+  "title": "Shipment",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "unique": true,
+      "title": "Id",
+      "description": "Required",
+      "edi": {
+        "segment": "id"
+      }
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Unique indentifier for the order"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Total cost for the shipment"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current shipment status"
+    },
+    "stock_location": {
+      "type": "string",
+      "description": "The stock location from where to ship"
+    },
+    "shipping_method": {
+      "type": "string",
+      "description": "The chosen shipping method"
+    },
+    "tracking": {
+      "type": "string",
+      "description": "Tracking number for the package"
+    },
+    "shipped_at": {
+      "type": "string",
+      "format": "date",
+      "description": "When the package was shipped"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date",
+      "description": "When the shipment was last updated"
+    },
+    "channel": {
+      "type": "string",
+      "description": "Sale channel"
+    },
+    "items": {
+      "type": "array",
+      "description": "Array of the package’s items",
+      "items": {
+        "$ref": "line_item.json"
+      }
+    },
+    "shipping_address": {
+      "$ref": "address.json",
+      "description": "Customers shipping address"
+    }
+  },
+  "required": [
+    "_id"
+  ]
+}

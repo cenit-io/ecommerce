@@ -1,0 +1,29 @@
+{
+  "title": "Image",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The url of the image"
+    },
+    "position": {
+      "type": "string",
+      "description": "Images position index in a gallery"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title to be used for this image"
+    },
+    "type": {
+      "type": "string",
+      "description": "The image type"
+    },
+    "dimension": {
+      "$ref": "dimension.json",
+      "description": "The image dimensions in pixels. Eg. height: 400, width: 300"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}

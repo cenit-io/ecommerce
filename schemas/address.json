@@ -1,0 +1,49 @@
+{
+  "title": "Address",
+  "type": "object",
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "description": "First name of the recipient"
+    },
+    "lastname": {
+      "type": "string",
+      "description": "Last name of the recipient"
+    },
+    "address1": {
+      "type": "string",
+      "description": "First line of address"
+    },
+    "address2": {
+      "type": "string",
+      "default": "",
+      "description": "Second line of address"
+    },
+    "zipcode": {
+      "type": "string",
+      "description": "Zipcode"
+    },
+    "city": {
+      "type": "string",
+      "description": "City name"
+    },
+    "state": {
+      "type": "string",
+      "description": "State name"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country ISO code"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    }
+  },
+  "required": [
+    "address1",
+    "zipcode",
+    "city",
+    "country"
+  ]
+}
