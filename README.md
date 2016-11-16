@@ -36,11 +36,11 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
  Or creating a new product:
 
  curl -X POST \  <br />
-      -H 'X-User-Access-Key: yourkey' \  <br />
-      -H 'X-User-Access-Token: yourkey' \  <br />
-      -H 'Content-Type: application/json' \  <br />
-      -d '{"_id":"","name":"","sku":"","description":"","price":0,"cost_price":0,"available_on":"","permalink":"","meta_description":"","meta_keywords":"","shipping_category":"","options":[],"taxons":[],"properties":{},"variants":[],"images":[]}' \  <br />
-      'https://cenit.io/api/v1/ecommerce/product'
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Key: yourkey' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Token: yourkey' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'Content-Type: application/json' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -d '{"_id":"","name":"","sku":"","description":"","price":0,"cost_price":0,"available_on":"","permalink":"","meta_description":"","meta_keywords":"","shipping_category":"","options":[],"taxons":[],"properties":{},"variants":[],"images":[]}' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     'https://cenit.io/api/v1/ecommerce/product'
 
 
  Also, you can directly go to Ecommerce models in your Cenit account, select **CURL** and see all available options through the API.
