@@ -23,7 +23,7 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
 
  You need the **Key** and **Authentication Token** for API requests.
 
- For example, for getting all products we cane do:
+ For example, for getting all products we can do:
 
   curl -X GET \
        -H 'X-User-Access-Key: yourkey' \
@@ -43,7 +43,7 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
       'https://cenit.io/api/v1/ecommerce/product'
 
 
- Also, you can directly go to Ecommerce models in your Cenit account, select cURL option and see all available options through the API.
+ Also, you can directly go to Ecommerce models in your Cenit account, select **CURL** and see all available options through the API.
 
  ![alt tag](images/product_model.png)
 
