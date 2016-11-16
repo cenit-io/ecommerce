@@ -8,7 +8,7 @@ The first thing you should do is create an account on [Cenit IO](https://cenit.i
 
 Then go to your account info in the top right:
 
-![alt tag](https://github.com/cenit-io/ecommerce/master/images/account_info.png)
+![alt tag](images/account_info.png)
 
 and look for **Credentials**. Copy the **Key** and **Authentication token**. You'll use them when doing API requests.
 
@@ -17,9 +17,9 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
 
  In left pane, you'll see all Ecommerce models available. Also, you can add other models you need.
 
- ![alt tag](https://github.com/cenit-io/ecommerce/master/images/ecommerce_models.png)
+ ![alt tag](images/ecommerce_models.png)
 
-# Request API
+# API Requests
 
  You need the **Key** and **Authentication Token** for API requests.
 
@@ -45,7 +45,7 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
 
  Also, you can directly go to Ecommerce models in your Cenit account, select cURL option and see all available options through the API.
 
- ![alt tag](https://github.com/cenit-io/ecommerce/master/images/product_model.png)
+ ![alt tag](images/product_model.png)
 
 
 
