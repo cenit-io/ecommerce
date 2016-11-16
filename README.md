@@ -25,21 +25,21 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
 
  For example, for getting all products we can do:
 
-  curl -X GET \
+  curl -X GET \  <br />
        -H 'X-User-Access-Key: yourkey' \ <br />
-       -H 'X-User-Access-Token: yourkey' \
-       -H 'Content-Type: application/json' \
-       -d '{"page":1,"limit":25,"order":"id","where":"{}"}' \
+       -H 'X-User-Access-Token: yourkey' \  <br />
+       -H 'Content-Type: application/json' \  <br />
+       -d '{"page":1,"limit":25,"order":"id","where":"{}"}' \  <br />
        'https://cenit.io/api/v1/ecommerce/product'
 
 
  Or creating a new product:
 
- curl -X POST \
-      -H 'X-User-Access-Key: yourkey' \
-      -H 'X-User-Access-Token: yourkey' \
-      -H 'Content-Type: application/json' \
-      -d '{"_id":"","name":"","sku":"","description":"","price":0,"cost_price":0,"available_on":"","permalink":"","meta_description":"","meta_keywords":"","shipping_category":"","options":[],"taxons":[],"properties":{},"variants":[],"images":[]}' \
+ curl -X POST \  <br />
+      -H 'X-User-Access-Key: yourkey' \  <br />
+      -H 'X-User-Access-Token: yourkey' \  <br />
+      -H 'Content-Type: application/json' \  <br />
+      -d '{"_id":"","name":"","sku":"","description":"","price":0,"cost_price":0,"available_on":"","permalink":"","meta_description":"","meta_keywords":"","shipping_category":"","options":[],"taxons":[],"properties":{},"variants":[],"images":[]}' \  <br />
       'https://cenit.io/api/v1/ecommerce/product'
 
 
