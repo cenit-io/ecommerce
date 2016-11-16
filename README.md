@@ -26,7 +26,7 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
  For example, for getting all products we can do:
 
   curl -X GET \
-       -H 'X-User-Access-Key: yourkey' \
+       -H 'X-User-Access-Key: yourkey' \ <br />
        -H 'X-User-Access-Token: yourkey' \
        -H 'Content-Type: application/json' \
        -d '{"page":1,"limit":25,"order":"id","where":"{}"}' \
