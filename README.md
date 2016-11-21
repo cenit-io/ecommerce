@@ -39,9 +39,16 @@ and look for **Credentials**. Copy the **Key** and **Authentication token**. You
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Key: yourkey' \  <br />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Token: yourkey' \  <br />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'Content-Type: application/json' \  <br />
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -d '{"_id":"","name":"","sku":"","description":"","price":0,"cost_price":0,"available_on":"","permalink":""}' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -d '{"_id":"1","name":"watch","sku":"watch01","description":"Watch","price":1.0,"cost_price":1.0,"available_on":"","permalink":""}' \  <br />
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   'https://cenit.io/api/v1/ecommerce/product'
 
+ Or creating a new order:
+ curl -X POST \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Key: yourkey' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'X-User-Access-Token: yourkey' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -H 'Content-Type: application/json' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -d '{"_id": "1", "status": "processing","channel": "spree", "email": "someuser@gmail.com","currency": "USD","line_items": [ {"id": "58331087ad981545fd006ec9", "name": "watch", "quantity": 2.0, "price": 1.0}]}' \  <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  'https://cenit.io/api/v2/ecommerce/order'
 
  Also, you can directly go to Ecommerce models in your Cenit account, select **CURL** and see all available options through the API.
 
