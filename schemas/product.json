@@ -67,7 +67,7 @@
     },
     "variants": {
       "type": "array",
-      "description": "Variants of product"
+      "description": "Variants of product",
       "items": {
         "$ref": "variant.json"
       }
