@@ -1,0 +1,32 @@
+{
+  "title": "Customer",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "unique": true,
+      "title": "Id",
+      "description": "Unique identifier for the customer"
+    },
+    "firstname": {
+      "type": "string",
+      "description": "Customers first name"
+    },
+    "lastname": {
+      "type": "string",
+      "description": "Customers last name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "billing_address": {
+      "$ref": "Address",
+      "description": "Customers shipping address"
+    },
+    "shipping_address": {
+      "$ref": "Address",
+      "description": "Customers shipping address"
+    }
+  }
+}

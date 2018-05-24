@@ -1,0 +1,79 @@
+{
+  "title": "Cart",
+  "type": "object",
+  "properties": {
+    "cart_id": {
+      "type": "string",
+      "unique": true,
+      "title": "Id",
+      "description": "Unique identifier for the order"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current order status"
+    },
+    "channel": {
+      "type": "string",
+      "description": "Location where order was placed"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency ISO code"
+    },
+    "placed_on": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date & time order was placed (ISO format)"
+    },
+    "totals": {
+      "$ref": "OrderTotal",
+      "description": "Order value totals"
+    },
+    "line_items": {
+      "type": "array",
+      "description": "Array of the order's line items",
+      "items": {
+        "$ref": "LineItem"
+      }
+    },
+    "adjustments": {
+      "type": "array",
+      "description": "Array of the order's adjustments",
+      "items": {
+        "$ref": "Adjustment"
+      }
+    },
+    "shipping_address": {
+      "$ref": "Address",
+      "description": "Customers shipping address"
+    },
+    "billing_address": {
+      "$ref": "Address",
+      "description": "Customers billing address"
+    },
+    "payments": {
+      "type": "array",
+      "description": "Array of the order's payments",
+      "items": {
+        "$ref": "Payment"
+      }
+    },
+    "shipments": {
+      "type": "array",
+      "description": "Array of shipments",
+      "items": {
+        "$ref": "Shipment"
+      }
+    }
+  },
+  "required": [
+    "cart_id",
+    "status",
+    "channel",
+    "currency"
+  ]
+}

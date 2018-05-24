@@ -1,0 +1,30 @@
+{
+  "title": "Inventory",
+  "type": "object",
+  "properties": {
+    "location": {
+      "type": "string",
+      "description": "Unique indentifier for the stock location"
+    },
+    "quantity": {
+      "type": "integer",
+      "description": "Quantity in stock"
+    },
+    "variant_sku": {
+      "type": "string",
+      "description": "Unique sku of product"
+    },
+    "product_sku": {
+      "type": "string",
+      "description": "Unique sku of product"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "Unique identifier of product"
+    }
+  },
+  "required": [
+    "location",
+    "quantity"
+  ]
+}
