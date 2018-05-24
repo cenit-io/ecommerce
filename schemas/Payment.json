@@ -1,0 +1,38 @@
+ {
+  "title": "Payment",
+  "type": "object",
+  "properties": {
+    "payment_id": {
+      "type": "integer"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "payment_method_id": {
+      "type": "integer"
+    },
+    "response_code": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

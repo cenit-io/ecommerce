@@ -1,0 +1,96 @@
+ {
+  "title": "Order",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "title": "Id",
+      "description": "Unique identifier for the order"
+    },
+    "number": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    },
+    "state": {
+      "type": "string",
+      "description": "Current order status"
+    },
+    "channel": {
+      "type": "string",
+      "description": "Location where order was placed"
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency ISO code"
+    },
+    "line_items": {
+      "type": "array",
+      "description": "Array of the order's line items",
+      "items": {
+        "$ref": "LineItem"
+      }
+    },
+    "item_total": {
+      "type": "string"
+    },
+    "adjustments": {
+      "type": "array",
+      "description": "Array of the order's adjustments",
+      "items": {
+        "$ref": "Adjustment"
+      }
+    },
+    "ship_address": {
+      "$ref": "Address",
+      "description": "Customers shipping address"
+    },
+    "bill_address": {
+      "$ref": "Address",
+      "description": "Customers billing address"
+    },
+    "payments": {
+      "type": "array",
+      "description": "Array of the order's payments",
+      "items": {
+        "$ref": "Payment"
+      }
+    },
+    "payment_total": {
+      "type": "string"
+    },
+    "shipments": {
+      "type": "array",
+      "description": "Array of shipments",
+      "items": {
+        "$ref": "Shipment"
+      }
+    },
+    "shipment_state": {
+      "type": "string"
+    },
+    "adjustment_total": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "special_instructions": {
+      "type": "string"
+    },
+    "total_quantity": {
+      "type": "integer"
+    },
+    "token": {
+      "type": "string"
+    }
+  }
+}

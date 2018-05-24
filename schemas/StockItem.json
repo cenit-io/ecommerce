@@ -1,0 +1,21 @@
+ {
+  "title": "StockItem",
+  "type": "object",
+  "properties": {
+    "stock_item_id": {
+      "type": "integer"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "count_on_hand": {
+      "type": "integer"
+    },
+    "stock_location_id": {
+      "type": "integer"
+    },
+    "variant_id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Warehouse",
+  "type": "object",
+  "properties": {
+    "owner_id": {
+      "type": "string"
+    },
+    "owner_channel": {
+      "type": "string"
+    }
+  }
+}

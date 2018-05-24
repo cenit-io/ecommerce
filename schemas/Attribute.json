@@ -1,0 +1,43 @@
+ {
+  "title": "Attribute",
+  "type": "object",
+  "properties": {
+    "categoryId": {
+      "type": "integer"
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "attributeType": {
+            "type": "string"
+          },
+          "inputType": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "isMandatory": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{
+ {
   "title": "Address",
   "type": "object",
   "properties": {
@@ -32,8 +32,7 @@
       "description": "State name"
     },
     "country": {
-      "type": "string",
-      "description": "Country ISO code"
+      "$ref": "Country"
     },
     "phone": {
       "type": "string",
@@ -42,7 +41,6 @@
   },
   "required": [
     "address1",
-    "zipcode",
     "city",
     "country"
   ]

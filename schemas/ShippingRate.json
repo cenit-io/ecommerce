@@ -1,0 +1,24 @@
+ {
+  "title": "ShippingRate",
+  "type": "object",
+  "properties": {
+    "ship_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "selected": {
+      "type": "boolean"
+    },
+    "shipment_id": {
+      "type": "string"
+    },
+    "shipping_method_id": {
+      "type": "string"
+    }
+  }
+}

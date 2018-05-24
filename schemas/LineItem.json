@@ -1,0 +1,48 @@
+{
+  "title": "LineItem",
+  "type": "object",
+  "properties": {
+    "line_id": {
+      "type": "string",
+      "description": "Unique identifier of product"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer",
+      "description": "Quantity ordered"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price per item"
+    },
+    "single_display_amount": {
+      "type": "string"
+    },
+    "total": {
+      "type": "string"
+    },
+    "tax_amount": {
+      "type": "number"
+    },
+    "discount_amount": {
+      "type": "number"
+    },
+    "display_total": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
+    },
+    "variant": {
+      "$ref": "Variant"
+    }
+  }
+}

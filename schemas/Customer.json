@@ -2,14 +2,11 @@
   "title": "Customer",
   "type": "object",
   "properties": {
-    "_id": {
+    "customer_id": {
       "type": "string",
       "unique": true,
       "title": "Id",
-      "description": "Unique identifier for the customer",
-      "edi": {
-        "segment": "id"
-      }
+      "description": "Unique identifier for the customer"
     },
     "firstname": {
       "type": "string",
@@ -24,17 +21,12 @@
       "description": "Customers email address"
     },
     "billing_address": {
-      "$ref": "address.json",
+      "$ref": "Address",
       "description": "Customers shipping address"
     },
     "shipping_address": {
-      "$ref": "address.json",
+      "$ref": "Address",
       "description": "Customers shipping address"
     }
-  },
-  "required": [
-    "_id",
-    "firstname",
-    "lastname"
-  ]
+  }
 }

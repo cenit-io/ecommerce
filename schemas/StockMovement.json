@@ -1,0 +1,18 @@
+ {
+  "title": "StockMovement",
+  "type": "object",
+  "properties": {
+    "movement_id": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "action": {
+      "type": "string"
+    },
+    "stock_item_id": {
+      "type": "integer"
+    }
+  }
+}

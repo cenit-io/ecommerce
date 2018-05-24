@@ -1,0 +1,27 @@
+ {
+  "title": "StockLocation",
+  "type": "object",
+  "properties": {
+    "stock_location_id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state_id": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}
