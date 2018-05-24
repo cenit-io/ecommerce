@@ -1,0 +1,18 @@
+ {
+  "title": "State",
+  "type": "object",
+  "properties": {
+    "abbr": {
+      "type": "string"
+    },
+    "country_id": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

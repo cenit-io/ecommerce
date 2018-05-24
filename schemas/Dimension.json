@@ -1,0 +1,12 @@
+ {
+  "title": "Dimension",
+  "type": "object",
+  "properties": {
+    "height": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    }
+  }
+}
