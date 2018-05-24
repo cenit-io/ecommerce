@@ -2,70 +2,65 @@
   "title": "Shipment",
   "type": "object",
   "properties": {
-    "_id": {
-      "type": "string",
-      "unique": true,
-      "title": "Id",
-      "description": "Required",
-      "edi": {
-        "segment": "id"
-      }
-    },
-    "order_id": {
-      "type": "string",
-      "description": "Unique indentifier for the order"
-    },
-    "email": {
-      "type": "string",
-      "description": "Customers email address"
-    },
-    "cost": {
-      "type": "number",
-      "description": "Total cost for the shipment"
-    },
-    "status": {
-      "type": "string",
-      "description": "Current shipment status"
-    },
-    "stock_location": {
-      "type": "string",
-      "description": "The stock location from where to ship"
-    },
-    "shipping_method": {
-      "type": "string",
-      "description": "The chosen shipping method"
+    "shipment_id": {
+      "type": "string"
     },
     "tracking": {
       "type": "string",
       "description": "Tracking number for the package"
+    },
+    "number": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Total cost for the shipment"
     },
     "shipped_at": {
       "type": "string",
       "format": "date",
       "description": "When the package was shipped"
     },
-    "updated_at": {
+    "state": {
       "type": "string",
-      "format": "date",
-      "description": "When the shipment was last updated"
+      "description": "Current shipment status"
     },
-    "channel": {
+    "order_id": {
       "type": "string",
-      "description": "Sale channel"
+      "description": "Unique indentifier for the order"
     },
-    "items": {
+    "stock_location_name": {
+      "type": "string"
+    },
+    "shipping_rates": {
       "type": "array",
-      "description": "Array of the package’s items",
       "items": {
-        "$ref": "line_item.json"
+        "$ref": "ShippingRate"
       }
     },
-    "shipping_address": {
-      "$ref": "address.json",
-      "description": "Customers shipping address"
+    "shipping_method": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "zone_id": {
+          "type": "string"
+        },
+        "shipping_category_id": {
+          "type": "string"
+        }
+      }
+    },
+    "email": {
+      "type": "string",
+      "description": "Customers email address"
+    },
+    "stock_location_id": {
+      "type": "string"
+    },
+    "variant_id": {
+      "type": "string"
     }
-  },
-  "required": [
-    "_id"
-  ]
+  }
 }

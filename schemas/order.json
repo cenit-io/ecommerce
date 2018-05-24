@@ -1,23 +1,28 @@
-{
+ {
   "title": "Order",
   "type": "object",
   "properties": {
-    "_id": {
+    "order_id": {
       "type": "string",
-      "unique": true,
       "title": "Id",
-      "description": "Unique identifier for the order",
-      "edi": {
-        "segment": "id"
-      }
+      "description": "Unique identifier for the order"
     },
-    "status": {
+    "number": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    },
+    "state": {
       "type": "string",
       "description": "Current order status"
     },
     "channel": {
       "type": "string",
       "description": "Location where order was placed"
+    },
+    "completed_at": {
+      "type": "string"
     },
     "email": {
       "type": "string",
@@ -27,56 +32,65 @@
       "type": "string",
       "description": "Currency ISO code"
     },
-    "placed_on": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Date & time order was placed (ISO format)"
-    },
-    "totals": {
-      "$ref": "order_total.json",
-      "description": "Order value totals"
-    },
     "line_items": {
       "type": "array",
-      "description": "Array of the order’s line items",
+      "description": "Array of the order's line items",
       "items": {
-        "$ref": "line_item.json"
+        "$ref": "LineItem"
       }
+    },
+    "item_total": {
+      "type": "string"
     },
     "adjustments": {
       "type": "array",
-      "description": "Array ot the orders’ adjustments",
+      "description": "Array of the order's adjustments",
       "items": {
-        "$ref": "adjustment.json"
+        "$ref": "Adjustment"
       }
     },
-    "shipping_address": {
-      "$ref": "address.json",
+    "ship_address": {
+      "$ref": "Address",
       "description": "Customers shipping address"
     },
-    "billing_address": {
-      "$ref": "address.json",
+    "bill_address": {
+      "$ref": "Address",
       "description": "Customers billing address"
     },
     "payments": {
       "type": "array",
-      "description": "Array of the order’s payments",
+      "description": "Array of the order's payments",
       "items": {
-        "$ref": "payment.json"
+        "$ref": "Payment"
       }
+    },
+    "payment_total": {
+      "type": "string"
     },
     "shipments": {
       "type": "array",
       "description": "Array of shipments",
       "items": {
-        "$ref": "shipment.json"
+        "$ref": "Shipment"
       }
+    },
+    "shipment_state": {
+      "type": "string"
+    },
+    "adjustment_total": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "special_instructions": {
+      "type": "string"
+    },
+    "total_quantity": {
+      "type": "integer"
+    },
+    "token": {
+      "type": "string"
     }
-  },
-  "required": [
-    "_id",
-    "status",
-    "channel",
-    "currency"
-  ]
+  }
 }

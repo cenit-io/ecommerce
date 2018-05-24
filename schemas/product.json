@@ -2,18 +2,18 @@
   "title": "Product",
   "type": "object",
   "properties": {
-    "_id": {
+    "product_id": {
       "type": "string",
       "unique": true,
       "title": "Id",
-      "description": "Unique identifier for the product",
-      "edi": {
-        "segment": "id"
-      }
+      "description": "Unique identifier for the product"
     },
     "name": {
       "type": "string",
       "description": "Product name to be displayed"
+    },
+    "barcode": {
+      "type": "string"
     },
     "sku": {
       "type": "string",
@@ -23,6 +23,10 @@
       "type": "string",
       "description": "Products description text"
     },
+    "short_description": {
+      "type": "string",
+      "description": "Products short description text"
+    },
     "price": {
       "type": "number",
       "minimum": 0,
@@ -31,6 +35,15 @@
     "cost_price": {
       "type": "number",
       "description": "The cost price of the product"
+    },
+    "total_on_hand": {
+      "type": "integer"
+    },
+    "deleted_at": {
+      "type": "boolean"
+    },
+    "stock": {
+      "$ref": "StockMovement"
     },
     "available_on": {
       "type": "string",
@@ -49,42 +62,52 @@
       "type": "string",
       "description": "Keywords to be placed in Products metadata"
     },
-    "shipping_category": {
+    "shipping_category_id": {
       "type": "string",
       "description": "Shipping category"
     },
-    "options": {
+    "sales_channels": {
       "type": "array",
-      "description": "Object that specifies the products options"
-    },
-    "taxons": {
-      "type": "array",
-      "description": "List of categories"
-    },
-    "properties": {
-      "type": "object",
-      "description": "Object that specifies the products properties"
+      "items": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string"
+          }
+        }
+      }
     },
     "variants": {
       "type": "array",
       "description": "Variants of product",
       "items": {
-        "$ref": "variant.json"
+        "$ref": "Variant"
+      }
+    },
+    "properties": {
+      "type": "array",
+      "description": "Properties Details",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "is_mandatory": {
+            "type": "boolean"
+          }
+        }
       }
     },
     "images": {
       "type": "array",
       "description": "Products images",
       "items": {
-        "$ref": "image.json"
+        "$ref": "Image"
       }
     }
-  },
-  "required": [
-    "_id",
-    "name",
-    "price",
-    "available_on",
-    "shipping_category"
-  ]
+  }
 }

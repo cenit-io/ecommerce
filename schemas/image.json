@@ -2,7 +2,19 @@
   "title": "Image",
   "type": "object",
   "properties": {
-    "url": {
+    "mini_url": {
+      "type": "string",
+      "description": "The url of the image"
+    },
+    "small_url": {
+      "type": "string",
+      "description": "The url of the image"
+    },
+    "product_url": {
+      "type": "string",
+      "description": "The url of the image"
+    },
+    "large_url": {
       "type": "string",
       "description": "The url of the image"
     },
@@ -19,11 +31,8 @@
       "description": "The image type"
     },
     "dimension": {
-      "$ref": "dimension.json",
+      "$ref": "Dimension",
       "description": "The image dimensions in pixels. Eg. height: 400, width: 300"
     }
-  },
-  "required": [
-    "url"
-  ]
+  }
 }
